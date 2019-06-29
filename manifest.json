@@ -1,0 +1,21 @@
+{
+    "manifest_version":2,
+    "name":"Password Hack",
+    "description":"Use one password securely for all websites",
+    "version":"1.0.0",
+    "icons":{
+        "128":"baseline_lock_black_128.png"
+    },
+    "browser_action":{
+        "default_icon":"baseline_lock_black_48.png",
+        "default_popup":"popup.html"
+    },
+    "permissions":["activeTab"],
+    "content_scripts": [
+        {
+        "matches": ["https://*/*","http://*/*"],
+        "js": ["contentscript.js"]
+        }
+      ]
+    
+}
